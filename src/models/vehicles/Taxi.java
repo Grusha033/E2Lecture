@@ -1,5 +1,7 @@
 package models.vehicles;
 
+import models.user.Passenger;
+
 public class Taxi extends Transport
 {
     private boolean isAvailable;
@@ -13,35 +15,36 @@ public class Taxi extends Transport
     @Override
     public void displayInfo()
     {
-        System.out.printf("UUID %s, route %s, capacity %s, is available %s%n",
-                uuid, routeNumber, capacity, isAvailable ? "yes" : "no");
+        System.out.printf("UUID %s, route %s, capacity %s/%s, is available [%s]%n",
+                uuid, routeNumber, currentCapacity, capacity, isAvailable ? "yes" : "no");
+    }
+
+    @Override
+    public void boardPassenger(Passenger passenger)
+    {
+        if (isAvailable && currentCapacity < capacity)
+        {
+            currentCapacity++;
+
+            isAvailable = false;
+        }
+    }
+
+    @Override
+    public void disembarkPassenger(Passenger passenger)
+    {
+        byte min = 0;
+        if (currentCapacity > min)
+        {
+            currentCapacity--;
+        }
+
+        if (currentCapacity == min) isAvailable = true;
     }
 
     @Override
     public void Move()
     {
         System.out.println("Taxi moved");
-    }
-
-    @Override
-    public void boardPassenger()
-    {
-
-    }
-
-    @Override
-    public void disembarkPassenger()
-    {
-
-    }
-
-    public boolean isAvailable()
-    {
-        return isAvailable;
-    }
-
-    public void setAvailable(boolean available)
-    {
-        isAvailable = available;
     }
 }

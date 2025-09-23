@@ -26,5 +26,9 @@ public class Passenger extends Person
     {
         this.ticketNumber = ticketNumber;
     }
+
+    public boolean haveTicketNumber() { return ticketNumber != null; }
+
+    public void destroyTicketNumber() {ticketNumber = null;}
 }
 

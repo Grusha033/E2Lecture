@@ -1,5 +1,7 @@
 package models.vehicles;
 
+import models.user.Passenger;
+
 public class Bus extends Transport
 {
     private final boolean isDoubleDecker;
@@ -14,25 +16,13 @@ public class Bus extends Transport
     @Override
     public void displayInfo()
     {
-        System.out.printf("UUID %s, route %s, capacity %s, is double decker %s%n",
-                uuid, routeNumber, capacity, isDoubleDecker);
+        System.out.printf("UUID %s, route %s, capacity %s/%s, is double decker %s%n",
+                uuid, routeNumber, currentCapacity, capacity, isDoubleDecker);
     }
 
     @Override
     public void Move()
     {
         System.out.println("Bus moved");
-    }
-
-    @Override
-    public void boardPassenger()
-    {
-
-    }
-
-    @Override
-    public void disembarkPassenger()
-    {
-
     }
 }

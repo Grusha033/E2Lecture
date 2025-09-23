@@ -1,5 +1,7 @@
 package models.vehicles;
 
+import models.user.Passenger;
+
 public class Tram extends Transport
 {
     private int trackLength;
@@ -13,26 +15,14 @@ public class Tram extends Transport
     @Override
     public void displayInfo()
     {
-        System.out.printf("UUID %s, route %s, capacity %s, trackLength %sm%n",
-                uuid, routeNumber, capacity, trackLength);
+        System.out.printf("UUID %s, route %s, capacity %s/%s, trackLength %sm%n",
+                uuid, routeNumber, currentCapacity, capacity, trackLength);
     }
 
     @Override
     public void Move()
     {
         System.out.println("Tram moved");
-    }
-
-    @Override
-    public void boardPassenger()
-    {
-
-    }
-
-    @Override
-    public void disembarkPassenger()
-    {
-
     }
 
     public int getTrackLength()
