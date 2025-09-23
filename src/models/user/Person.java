@@ -14,19 +14,4 @@ public abstract class Person
     }
 
     public abstract void displayInfo();
-
-    public UUID getUuid()
-    {
-        return uuid;
-    }
-
-    public String getName()
-    {
-        return name;
-    }
-
-    public void setName(String name)
-    {
-        this.name = name;
-    }
 }

@@ -60,5 +60,8 @@ public class Main
         transportSystem.disembarkPassengerFromTransport(busPassengerTwo, bus);
 
         transportSystem.displayInfo();
+
+        transportSystem.removeTransport(bus);
+        transportSystem.removeDriver(busDriver);
     }
 }

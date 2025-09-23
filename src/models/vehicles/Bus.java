@@ -1,7 +1,5 @@
 package models.vehicles;
 
-import models.user.Passenger;
-
 public class Bus extends Transport
 {
     private final boolean isDoubleDecker;

@@ -1,10 +1,8 @@
 package models.vehicles;
 
-import models.user.Passenger;
-
 public class Tram extends Transport
 {
-    private int trackLength;
+    private final int trackLength;
 
     public Tram(int routeNumber, int capacity, int trackLength)
     {
@@ -23,15 +21,5 @@ public class Tram extends Transport
     public void Move()
     {
         System.out.println("Tram moved");
-    }
-
-    public int getTrackLength()
-    {
-        return trackLength;
-    }
-
-    public void setTrackLength(int trackLength)
-    {
-        this.trackLength = trackLength;
     }
 }

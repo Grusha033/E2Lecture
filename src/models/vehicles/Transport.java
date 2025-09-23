@@ -46,24 +46,4 @@ public abstract class Transport implements PassengerCarrier
     {
         System.out.println("Transport moved");
     }
-
-    public UUID getUuid()
-    {
-        return uuid;
-    }
-
-    public int getRouteNumber()
-    {
-        return routeNumber;
-    }
-
-    public void setRouteNumber(int routeNumber)
-    {
-        this.routeNumber = routeNumber;
-    }
-
-    public int getCapacity()
-    {
-        return capacity;
-    }
 }

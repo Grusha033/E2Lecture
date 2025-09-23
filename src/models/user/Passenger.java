@@ -17,11 +17,6 @@ public class Passenger extends Person
         System.out.printf("Passenger: UUID %s, Name %s, ticket number %s%n", uuid, name, ticketNumber);
     }
 
-    public UUID getTicketNumber()
-    {
-        return ticketNumber;
-    }
-
     public void setTicketNumber(UUID ticketNumber)
     {
         this.ticketNumber = ticketNumber;
