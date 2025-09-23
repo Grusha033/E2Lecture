@@ -17,6 +17,7 @@ public class Driver extends Person
 
     public void drive(Transport transport)
     {
-
+        System.out.println("Driver UUID: " + uuid + " " + transport.getClass().getSimpleName());
+        transport.Move();
     }
 }
